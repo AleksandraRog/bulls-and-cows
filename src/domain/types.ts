@@ -1,4 +1,4 @@
-import {Base} from '../base';
+import {Base} from './base';
 
 export const ALPHABETS: Record<Base, string> = {
   [Base.bin]: '01',

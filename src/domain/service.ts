@@ -1,5 +1,5 @@
-import {Base} from '../base';
-import {ALPHABETS, Evaluare} from './types';
+import {Base} from './base';
+import {ALPHABETS, type Evaluare} from './types';
 
 const MIN_SECRET_LENGTH = 2;
 const MAX_SECRET_LENGTH = 6;
@@ -90,4 +90,8 @@ export default {
   evaluateGuess,
   generateSecret,
   isValidGuess,
+
+  MIN_SECRET_LENGTH,
+  MAX_SECRET_LENGTH,
+  BINARY_MAX_LENGTH,
 };
