@@ -1,4 +1,4 @@
-import {Base} from '../src/base';
+import {Base} from '../src/domain/base';
 import service from '../src/domain/service';
 import {ALPHABETS} from '../src/domain/types';
 
