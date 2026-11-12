@@ -45,7 +45,7 @@ describe('TDD: createDigitValidator', () => {
 
     test('Decimal (Base.dec) - should accept ALL valid symbols', () => {
       const isDecDigit = service.createDigitValidator(Base.dec);
-      const validDecSymbols = ALPHABETS[Base.bin].split('');
+      const validDecSymbols = ALPHABETS[Base.dec].split('');
 
       validDecSymbols.forEach((char) => {
         expect(isDecDigit(char)).toBe(true);
