@@ -191,4 +191,6 @@ function renderGame() {
 export function toggleSettingLock(lock: boolean) {
   baseSelect.classList.toggle('lock-click', lock);
   lengthSelect.classList.toggle('lock-click', lock);
+  baseSelect.disabled = lock;
+  lengthSelect.disabled = lock;
 }
