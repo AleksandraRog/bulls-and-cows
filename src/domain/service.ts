@@ -12,6 +12,10 @@ interface CacheInterface {
 
 const countPossibleSecrets: CacheInterface = (length: number, base: Base, count: number | null = null): number => {
   if (!count && (length < MIN_SECRET_LENGTH || length > MAX_SECRET_LENGTH)) throw new RangeError('Error parameter');
+  if (base === Base.bin && length > BINARY_MAX_LENGTH) {
+    throw new RangeError('Error parameter');
+  }
+
   if (!countPossibleSecrets.cache) {
     countPossibleSecrets.cache = {};
   }
