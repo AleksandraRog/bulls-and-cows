@@ -13,5 +13,3 @@ export interface View {
 export type ViewBuilder<T extends HTMLElement> = View & {
   (inners: (View | HTMLElement)[]): ViewBuilder<T>;
 };
-
-export type AllHTMLElements = HTMLElementTagNameMap[keyof HTMLElementTagNameMap];

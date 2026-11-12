@@ -1,6 +1,6 @@
-import type {AllHTMLElements, View, ViewBuilder} from './view';
+import type {View, ViewBuilder} from './view';
 
-export function renderView<T extends AllHTMLElements>(view: View): T {
+export function renderView<T extends HTMLElement>(view: View): T {
   const {tag = 'div'} = view;
   const element: T = document.createElement(tag) as T;
 
