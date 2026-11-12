@@ -21,6 +21,7 @@ export const addLogItem = (item: History) => {
     ]),
   );
   logTable.appendChild(logli);
+  updateStateLog(item);
 };
 
 export function addWinRecord(time: number) {
@@ -36,6 +37,10 @@ export function addWinRecord(time: number) {
   const newState = gameStore.setWinRecords([...historyCache, recordItem]);
   storage.setItem<WinRecord[]>('wins', newState.winRecords);
   updateWinHistory(newState.winRecords!);
+}
+
+function updateStateLog(logItem: History) {
+  gameStore.addAttempt(logItem);
 }
 
 export const footer: HTMLElement = renderView<HTMLElement>(createView<HTMLElement>('footer.footer')([logTable]));

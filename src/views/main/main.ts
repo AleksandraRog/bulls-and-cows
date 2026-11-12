@@ -103,7 +103,6 @@ export function renderNewGame() {
   cowsCount.textContent = '0';
   input.value = '';
   toggleAttemptLock(false);
-  updateFooterLog();
   startTimer();
 }
 
@@ -111,8 +110,6 @@ export function renderCurrentScore(score: Evaluare) {
   bullsCount.textContent = String(score.bulls);
   cowsCount.textContent = String(score.cows);
 }
-
-function updateFooterLog() {}
 
 export function toggleAttemptLock(lock: boolean) {
   input.classList.toggle('lock-click', lock);
