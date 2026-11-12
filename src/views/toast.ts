@@ -4,7 +4,7 @@ const toastElement = utils.renderView<HTMLDivElement>(utils.createView<HTMLDivEl
 
 let hideTimeoutId: number | null = null;
 
-export function showErrorToast(message: string, durationMs = 2500) {
+export function showToast(message: string, durationMs = 2500) {
   if (!toastElement.isConnected) {
     document.body.append(toastElement);
   }

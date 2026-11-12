@@ -5,7 +5,7 @@ import type {Evaluare} from '../../domain/types';
 import {gameStore} from '../../index';
 import {addLogItem, addWinRecord} from '../footer/footer';
 import {toggleSettingLock} from '../setting/header';
-import {showErrorToast} from '../toast';
+import {showToast} from '../toast';
 import * as utils from './../utils';
 import {startTimer, stopTimer, timerDisplay} from './timer';
 
@@ -67,7 +67,9 @@ function sendHistory(guess: string, message: Evaluare) {
 
 function showDialog(type: string) {
   if (type === 'error') {
-    showErrorToast(`Input Error`);
+    showToast(`Input Error`);
+  } else if (type === 'win') {
+    showToast('Win!!!');
   }
 }
 
