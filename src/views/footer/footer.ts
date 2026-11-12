@@ -14,9 +14,9 @@ export function clearFooterLog() {
 export const addLogItem = (item: History) => {
   const logli = renderView<HTMLLIElement>(
     createView<HTMLLIElement>('li.log-item')([
-      createView<HTMLSpanElement>('span.result', {text: `Attempt: ${item.guess}`}),
+      createView<HTMLSpanElement>('span.result', {text: `Attempt: "${item.guess}"`}),
       createView<HTMLSpanElement>('span.evaluare', {
-        text: `Score: { bulls:${item.evaluare.bulls}, cows:${item.evaluare.cows} }`,
+        text: `Score: { bulls: ${item.evaluare.bulls}, cows: ${item.evaluare.cows} }`,
       }),
     ]),
   );
