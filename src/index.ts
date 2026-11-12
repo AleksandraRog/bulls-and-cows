@@ -8,7 +8,7 @@ import type {WinRecord} from './storage/record';
 import storage from './storage/storage';
 import {footer} from './views/footer/footer';
 import views, {toggleAttemptLock} from './views/main/main';
-import {header, updateWinHistory} from './views/setting/header';
+import {header, updateStartButtonLabel, updateWinHistory} from './views/setting/header';
 
 function createGameStore(initialState: GameState) {
   let state: GameState = initialState;
@@ -68,10 +68,12 @@ function render() {
       const wins: WinRecord[] = Array.isArray(data) ? data : [];
       gameStore.setWinRecords(wins);
       updateWinHistory(wins);
+      updateStartButtonLabel();
     })
     .catch(() => {
       gameStore.setWinRecords([]);
       updateWinHistory([]);
+      updateStartButtonLabel();
     })
     .finally(() => {
       views.root?.append(header, views.main, footer);
