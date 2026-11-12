@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0.2rem;
+  margin: 0 auto;
+}
+
+.main * {
+  margin: 0 auto;
+}
+
+.round-score {
+  display: flex;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.approve-button.lock-click,
+.input.lock-click {
+  pointer-events: none;
+}
+
+input {
+  color: brown;
+}
