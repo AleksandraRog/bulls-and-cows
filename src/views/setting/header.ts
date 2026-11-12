@@ -109,7 +109,7 @@ const createHistoryRowConfig = (place: number, record: WinRecord) =>
     utils.createView<HTMLTableCellElement>('td', {text: String(record.score)}),
     utils.createView<HTMLTableCellElement>('td', {text: String(record.base)}),
     utils.createView<HTMLTableCellElement>('td', {text: String(record.length)}),
-    utils.createView<HTMLTableCellElement>('td', {text: String(record.time)}),
+    utils.createView<HTMLTableCellElement>('td', {text: `${record.time} sec`}),
   ]);
 
 export function updateStartButtonLabel() {
