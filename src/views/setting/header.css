@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  justify-content: flex-end;
+}
+
+select {
+  background-color: greenyellow;
+}
+
+select * {
+  justify-content: center;
+}
+
+.history-table * {
+  background-color: orange;
+}
+
+.history-table th {
+  background: orangered;
+}
+
+.option-length.deactived {
+  display: none;
+}
+
+.select-length.lock-click,
+.select-base.lock-click {
+  pointer-events: none;
+}
+
+.history-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.history-table {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 10;
+  min-width: 240px;
+  margin-top: 4px;
+  border-collapse: collapse;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.history-table th,
+.history-table td {
+  padding: 6px 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.history-table th {
+  font-weight: 600;
+}
